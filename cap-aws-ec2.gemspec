@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Automatically defines servers in your capistrano deploy script}
   spec.description   = %q{Tired of changing dns names or ips in your deploy.rb? You found a solution! This gem uses EC2 tags in order to define servers in your deploy script. You can set project, environment and roles tags per instance to have total control.}
 
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/FTBpro/cap-aws-ec2"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -2,9 +2,12 @@
 
 Tired of setting hardcoded ips or dns names in your capistrano deploy script?
 You just found the solution!
+
 cap-aws-ec2 will fetch instances from you EC2 region and define them by
 project, environment and roles.
+
 This gem should be used in conjunction with [capistrano multistage](https://github.com/capistrano/capistrano/wiki/2.x-Multistage-Extension)
+
 Note: This gem is only compatibale with Capistrano 2.x
 
 ## Installation

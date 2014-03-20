@@ -37,7 +37,7 @@ require 'cap-aws-ec2'
 set :aws_key_id, 'XXXXXXXXXXXXXX'
 set :secret_access_key, 'XXXXXXXXXXXXXXXXXXXX'
 set :aws_region, 'us-west-2' 
-set :ec2_project, 'ftbpro-web'
+set :ec2_project, 'my-project-tag-value'
 set(:ec2_env) { stage }
 ```
 

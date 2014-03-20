@@ -25,26 +25,26 @@ Or install it yourself as:
 
 1. Define tags for your servers on EC2:
 
-| Name Tag      | Project Tag   | Environment Tag | Roles Tag       | Public IP |
-| ------------- |:-------------:|:---------------:|:---------------:| ---------:| 
-| ftbpro-web1   | ftbpro-web    | production      | app,web         | 1.1.1.1   |
-| ftbpro-web2   | ftbpro-web    | production      | app,web         | 2.2.2.2   |
-| ftbpro-resque | ftbpro-web    | production      | app,resque      | 3.3.3.3   | 
+  | Name Tag      | Project Tag   | Environment Tag | Roles Tag       | Public IP |
+  | ------------- |:-------------:|:---------------:|:---------------:| ---------:| 
+  | ftbpro-web1   | ftbpro-web    | production      | app,web         | 1.1.1.1   |
+  | ftbpro-web2   | ftbpro-web    | production      | app,web         | 2.2.2.2   |
+  | ftbpro-resque | ftbpro-web    | production      | app,resque      | 3.3.3.3   | 
 
 2. In your `deploy.rb` script:
-```ruby
-require 'cap-aws-ec2'
-set :aws_key_id, 'XXXXXXXXXXXXXX'
-set :secret_access_key, 'XXXXXXXXXXXXXXXXXXXX'
-set :aws_region, 'us-west-2' 
-set :ec2_project, 'my-project-tag-value'
-set(:ec2_env) { stage }
-```
+  ```ruby
+  require 'cap-aws-ec2'
+  set :aws_key_id, 'XXXXXXXXXXXXXX'
+  set :secret_access_key, 'XXXXXXXXXXXXXXXXXXXX'
+  set :aws_region, 'us-west-2' 
+  set :ec2_project, 'my-project-tag-value'
+  set(:ec2_env) { stage }
+  ```
 
 3. In your corresponding stage file (`config/deploy/production.rb`):
-```ruby
-define_servers
-```
+  ```ruby
+  define_servers
+  ```
 
 This will result in the following statements:
 

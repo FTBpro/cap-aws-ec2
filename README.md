@@ -14,7 +14,7 @@ Note: This gem is only compatibale with Capistrano 2.x
 
 Add this line to your application's Gemfile:
 
-    gem 'cap-aws-ec2'
+    gem 'cap-aws-ec2', require: false
 
 And then execute:
 
